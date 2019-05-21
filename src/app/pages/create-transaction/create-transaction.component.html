@@ -1,0 +1,31 @@
+<div class="container">
+	<h1>Create a Transaction</h1>
+	<p>Transfer some money to someone out there!</p>
+
+	<br>
+
+
+	<div class="form-group">
+		<label>From Address</label>
+		<input type="text" class="form-control" [(ngModel)]="walletKey.publicKey" disabled>
+	</div>
+
+
+	<div class="form-group">
+		<label for="toAddress">To Address</label>
+		<input type="text" class="form-control" [(ngModel)]="newTx.toAddress">
+	</div>
+
+	<div class="form-group">
+		<label for="amount">Ammount to Transfer</label>
+		<input type="text" class="form-control" [(ngModel)]="newTx.ammount">
+	</div>
+
+	<div class="form-group">
+		<label for="SSSS">SSSS data</label>
+		<input type="text" class="form-control" [(ngModel)]="newTx.SSSSdata">
+	</div>
+
+	<button (click)="createTransaction()" class="btn btn-primary">Sign and create this Transaction</button>
+</div>
+

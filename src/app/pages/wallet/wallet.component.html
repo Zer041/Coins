@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Wallet</h1>
+	<p>Here you can visualize the balance and keys of your wallet</p>
+	
+	<div class="form-group">
+		<label for="address">Address</label>
+		<input type="text" class="form-control" [(ngModel)]="this.address">
+	</div>
+
+	<button (click)="getBalance()" class="btn btn-primary">Visualize</button>
+
+
+
+	<app-wallet-viewer
+
+		
+	></app-wallet-viewer>
+</div>
