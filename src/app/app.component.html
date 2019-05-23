@@ -1,16 +1,29 @@
 <nav class="navbar navbar-dark bg-dark">
-  	<a class="navbar-brand" routerLink="/">
+  	<b class="navbar-brand" routerLink="/">
     	ZherexCoin
-  	</a>
+  	</b>
 
 	<div>
 		<button class="btn btn-outline-light" routerLink="/settings">Settings</button>
 		&nbsp;
 		<button class="btn btn-outline-light" routerLink="/createTransaction">Create Transaction</button>
 		&nbsp;
-		<button class="btn btn-outline-light" routerLink="/miningBlock">Pending Transactions</button>
+		<button class="btn btn-outline-light" routerLink="/miningBlock">Miner</button>
 		&nbsp;
-		<button class="btn btn-outline-light" routerLink="/wallet">Wallet</button>
+		<button class="btn btn-outline-light" routerLink="/about">About Us</button>
+ 		&nbsp;
+      	<button class="btn btn-outline-light dropdown">
+			<a class="dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          	<a style="color:green;">Wallet</a>
+        	</a>
+        	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        		<li class="dropdown-header disabled"><strong>Wallet related</strong></li>
+          		<a class="dropdown-item" routerLink="/balance">Balance Viewer</a>
+          		<a class="dropdown-item" routerLink="/generator">Keypair Generator</a>
+          		<li class="dropdown-header disabled"><strong>Shamir Tool's</strong></li>
+          		<a class="dropdown-item" routerLink="/shamirSecretSharing">Shamir Secret Sharing Tool</a>
+        	</ul>
+      	</button>
 	</div>
 </nav>
 

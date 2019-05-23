@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CreateTransactionComponent } from 'src/app/pages/create-transaction/create-transaction.component';
 import { PendingTransactionsComponent } from './pages/pending-transactions/pending-transactions.component';
 import { WalletComponent } from 'src/app/pages/wallet/wallet.component';
+import { AboutUsComponent } from 'src/app/pages/about-us/about-us.component';
+import { ShamirSecretsComponent } from 'src/app/pages/shamir-secrets/shamir-secrets.component';
 
 const routes: Routes = [
 { path: '', component: BlockchainViewerComponent },
@@ -15,7 +17,9 @@ const routes: Routes = [
 { path: 'settings', component: SettingsComponent },
 { path: 'createTransaction', component: CreateTransactionComponent },
 { path: 'miningBlock', component: PendingTransactionsComponent },
-{ path: 'wallet', component: WalletComponent }
+{ path: 'balance', component: WalletComponent },
+{ path: 'about', component: AboutUsComponent },
+{ path: 'shamirSecretSharing', component: ShamirSecretsComponent }
 ];
 
 @NgModule({

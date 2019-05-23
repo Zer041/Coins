@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { NgxPopper } from 'angular-popper';
 
 
 
@@ -14,6 +15,8 @@ import { CreateTransactionComponent } from 'src/app/pages/create-transaction/cre
 import { PendingTransactionsComponent } from './pages/pending-transactions/pending-transactions.component';
 import { WalletComponent } from 'src/app/pages/wallet/wallet.component';
 import { WalletViewerComponent } from './components/wallet-viewer/wallet-viewer.component';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ShamirSecretsComponent } from './pages/shamir-secrets/shamir-secrets.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import { WalletViewerComponent } from './components/wallet-viewer/wallet-viewer.
     CreateTransactionComponent,
     PendingTransactionsComponent,
     WalletComponent,
-    WalletViewerComponent
+    WalletViewerComponent,
+    AboutUsComponent,
+    ShamirSecretsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule,
+    NgxPopper
   ],
   providers: [],
   bootstrap: [AppComponent]

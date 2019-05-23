@@ -1,8 +1,9 @@
-.navbar-light {
-    background-color: #F8F8F8;
-    border-color: #E7E7E7;
-}
-/* change the background color */
-.navbar-custom {
-    background-color: #ff5500;
+
+.dropdown:hover .dropdown-menu {
+  position: absolute;
+  display: block;
+  top: 33px;
+  left: -160px;
+  width: 240px;
+  height: 200px;
 }

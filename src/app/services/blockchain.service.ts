@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import * as Blockchain from 'node_modules/workspace/Blockchain';
 import * as Transaction from 'node_modules/workspace/Transaction';
+import * as Shamir from 'node_modules/workspace/Shamir';
+
 
 //import { Block } from 'node_modules/workspace/Block';
 import EC from "elliptic";
@@ -11,7 +13,7 @@ import EC from "elliptic";
 export class BlockchainService {
 	public blockchainInstance = new Blockchain();
 	public transactionInstance = new Transaction();
-
+	public shamirInstance = new Shamir();
 	public walletKeys = [];
 
 	constructor() { 
@@ -24,9 +26,20 @@ export class BlockchainService {
 		this.generateWalletKeys();		
 	}
 
-
 	getBlocks() {
 		return this.blockchainInstance.chain;
+	}
+
+
+	splitIntoShares(data, shares, theshold) {
+		return this.shamirInstance.splitData(data, shares, theshold)
+	}
+
+
+	combineShares(data){
+		let x = this.shamirInstance.combShares(data);
+		return x;
+
 	}
 
 
@@ -64,6 +77,6 @@ export class BlockchainService {
 			privateKey: key.getPrivate('hex'),
 		});
 
-		console.log(this.walletKeys);
+		//console.log(this.walletKeys);
 	}
 }
